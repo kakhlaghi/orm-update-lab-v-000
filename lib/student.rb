@@ -64,6 +64,7 @@ def self.find_by_name(name_input)
     SELECT *
     FROM students
     WHERE students.name = ?
+    LIMIT 1
   SQL
   DB[:conn].execute(sql, name_input).collect {|row|
     self.new_from_db(row)
