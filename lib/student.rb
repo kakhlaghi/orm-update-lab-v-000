@@ -66,7 +66,7 @@ def self.find_by_name(name_input)
     WHERE name = name_input
   SQL
   grab = DB[:conn].execute(sql)
-
+  self.new_from_db
 end
 
 end
