@@ -65,8 +65,8 @@ def self.find_by_name(name_input)
     FROM students
     WHERE name = name_input
   SQL
-  DB[:conn].execute(sql)
-  
+  grab = DB[:conn].execute(sql)
+
 end
 
 end
