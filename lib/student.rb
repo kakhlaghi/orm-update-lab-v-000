@@ -63,9 +63,9 @@ def self.find_by_name(name_input)
   sql = <<-SQL
     SELECT students.name
     FROM students
-    WHERE students.name = name_input
+    WHERE students.name = ?
   SQL
-  row = DB[:conn].execute(sql)
+  row = DB[:conn].execute(sql, name_input)
   self.new_from_db(row)
 end
 
