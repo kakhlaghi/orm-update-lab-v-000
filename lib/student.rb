@@ -47,8 +47,8 @@ class Student
   end
   end
 
-def self.create
-  Student.new
+def self.create(name, grade)
+  Student.new(name,grade)
 end
 
 
