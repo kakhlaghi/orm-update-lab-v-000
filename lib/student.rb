@@ -59,11 +59,11 @@ def self.new_from_db(row)
     self.new(name, grade, id)
 end
 
-def self.find_by_name(name)
+def self.find_by_name(name_input)
   sql = <<-SQL
     SELECT name
     FROM students
-    
+    WHERE name = name_input
   SQL
 end
 
